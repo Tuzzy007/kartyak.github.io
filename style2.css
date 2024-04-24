@@ -1,0 +1,129 @@
+a.button {
+    appearance: none;
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 0.75em;
+    min-width: 0;
+    outline: none;
+    padding: 0.5em 1.1em;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+a.button:disabled {
+    pointer-events: none;
+}
+
+a.button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+a.button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.card-container {
+    width: 900px;
+    height: 600px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    left: 25%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.card {
+    width: 280px;
+    height: 450px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    flex-basis: 30%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-text {
+    text-align: center;
+    padding: 10px;
+}
+
+.card-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.bottom-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.about-me {
+    margin-bottom: 50px;
+}
+
+.ir1 {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    z-index: 2;
+    font-family: "Oswald", sans-serif;
+}
+
+h1 {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 210px;
+    z-index: 2;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+}
+
+p {
+    position: absolute;
+    top: 270px;
+    right: 20px;
+    left: 20px;
+    font-family: "Oswald", sans-serif;
+}
+
+.cim {
+    background-color: yellow;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bottom2 {
+    margin: 20px 20px 20px 20px;
+}

@@ -62,7 +62,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 15px;
 }
 
 .card img {
@@ -104,16 +104,6 @@ body {
     font-family: "Oswald", sans-serif;
 }
 
-h1 {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 210px;
-    z-index: 2;
-    font-family: "Oswald", sans-serif;
-    font-size: 20px;
-}
-
 p {
     position: absolute;
     top: 270px;
@@ -130,4 +120,14 @@ p {
 
 .bottom2 {
     margin: 20px 20px 20px 20px;
+}
+
+#text {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 210px;
+    z-index: 2;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
 }

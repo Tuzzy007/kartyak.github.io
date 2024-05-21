@@ -1,1 +1,0 @@
-# kartyak.github.io

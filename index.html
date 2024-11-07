@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-yellow">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#card">Card</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                További webek
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://sites.google.com/view/ita-sb10b/ita">ITA</a>
+                <a class="dropdown-item" href="https://sites.google.com/view/ita-sb10b/digikult">Digikult</a>
+                <a class="dropdown-item" href="https://sites.google.com/view/ita-sb10b/projekt">Projekt</a>
+                <a class="dropdown-item" href="https://sites.google.com/view/ita-sb10b/python">Python</a>
+                <a class="dropdown-item" href="https://sites.google.com/view/ita-sb10b/web">Web</a>
+                <a class="dropdown-item" href="https://sites.google.com/view/ita-sb10b/h%C3%A1l%C3%B3zat">Hálózat</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button id="dark-mode-toggle" class="btn btn-secondary ml-auto btn-dark">Sötét mód Be/Ki</button>
+        <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#myModal">Toast</button>
+    </nav>
+    <div class="container">
+        <div class="panel">
+          <div class="ring">
+            <div class="card card1"></div>
+            <div class="border">
+              <p class="title">Virág</p>
+              <div class="slide">
+                <h6 class="para">Színezhető virág</h6>
+                <div class="line">
+                    <a href="https://tuzzy007.github.io/virag.github.io/" target="_blank" class="para">
+                        <h6>Megnézem</h6> <i class="fa fa-plane" aria-hidden="true"></i>
+                    </a>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="ring">
+            <div class="card card2"></div>
+            <div class="border">
+              <p class="title">Órarend</p>
+              <div class="slide">
+                <h6 class="para">Órarend exportálása</h6>
+                <div class="line">
+                  <h6 class="para">Probléma volt a helyettesítés beosztása</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+            <div class="ring">
+              <div class="card card3"></div>
+              <div class="border">
+                <p class="title">Időjárás</p>
+                <div class="slide">
+                  <h6 class="para">Időjárás API-val</h6>
+                  <div class="line">
+                    <a href="https://sites.google.com/d/15tY5SKBf5127ciRSZEFScQhNLQ8p7rGY/p/1EnW9R6M8iwxR1EUz21XQH6DjKN6CgJTR/edit" target="_blank" class="para">
+                        <h6>Megnézem</h6> <i class="fa fa-plane" aria-hidden="true"></i>
+                    </a>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="parallax"></div>
+    <div class="chat-icon" onclick="toggleChat()">
+        💬
+    </div>
+    <div id="chatbox" class="chatbox">
+        <div class="chatbox-header">
+            <h4>Chatbot</h4>
+            <button onclick="toggleChat()">✖️</button>
+        </div>
+        <div class="chatbox-body">
+            <div class="messages" id="messages"></div>
+            <div class="chatbox-footer">
+                <input type="text" id="userInput" placeholder="Írj valamit..." onkeydown="if(event.key === 'Enter') { sendMessage(); }">
+                <button onclick="sendMessage()">Küldés</button>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div id="newtask">
+            <input type="text" placeholder="Írj be tehendő">
+            <button id="push">Hozzáad</button>
+        </div>
+        <div id="tasks"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave">
+        <path fill="#273036" fill-opacity="1" d="M0,0L60,10.7C120,21,240,43,360,74.7C480,107,600,149,720,154.7C840,160,960,128,1080,101.3C1200,75,1320,53,1380,42.7L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Toast</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <center><img src="IMG_5396.jpg" id="kecske" alt="Bence (Tuzzy)"></center>
+                    <center>Bence vagyok 17 éves.</center>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.navbar').classList.toggle('dark-mode');
+        document.querySelectorAll('.card').forEach(function(card) {
+            card.classList.toggle('dark-mode');
+        });
+        document.querySelectorAll('.cim').forEach(function(cim) {
+            cim.classList.toggle('dark-mode');
+        });
+        document.querySelectorAll('.button').forEach(function(button) {
+            button.classList.toggle('dark-mode');
+        });
+        document.querySelectorAll('.tasks').forEach(function(tasks) {
+            task.classList.toggle('dark-mode');
+        });
+    });
+
+
+    function toggleChat() {
+        var chatbox = document.getElementById('chatbox');
+        chatbox.style.display = chatbox.style.display === 'none' || chatbox.style.display === '' ? 'block' : 'none';
+        if (chatbox.style.display === 'block') {
+            sendInitialMessage();
+        }
+    }
+
+    function sendMessage() {
+        var userInput = document.getElementById('userInput');
+        var messageText = userInput.value.trim();
+        if (messageText) {
+            addMessage('user', messageText);
+            userInput.value = '';
+            getBotResponse(messageText);
+        }
+    }
+
+    function addMessage(sender, text) {
+        var messages = document.getElementById('messages');
+        messages.innerHTML = '';
+        var message = document.createElement('div');
+        message.classList.add('message', sender);
+        if (sender === 'bot') {
+            message.innerHTML = '<p style="color: black;">' + text + '</p>';
+        } else {
+            message.innerHTML = '<p>' + text + '</p>';
+        }
+        messages.appendChild(message);
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+
+
+    function getBotResponse(messageText) {
+        var response = '';
+        var responses = {
+            '1.': 'Chatbot vagyok, a te virtuális asszisztensed.',
+            '2.': 'Bence készített (Tuzzy)',
+            '3.': 'Tel.: 06 .......',
+            '1': 'Chatbot vagyok, a te virtuális asszisztensed.',
+            '2': 'Bence készített (Tuzzy)',
+            '3': 'Tel.: 06 .......',
+        };
+
+        response = responses[messageText] || 'Elnézést, nem értem a kérdést.';
+
+        setTimeout(function() {
+            addMessage('bot', response);
+        }, 500);
+    }
+
+    function sendInitialMessage() {
+        addMessage('bot', 'Szia! Ezekre a kérdésekre tudok neked választadni: 1. Leírom neked a nevem, 2. Ki készített, 3. Sajnos nem tudok neked segíteni de adok elérhetőséget!');
+    }
+
+
+    document.querySelector('#push').onclick = function(){
+        if(document.querySelector('#newtask input').value.length == 0){
+            alert("Írj be valamit!!!")
+        }
+
+        else{
+            document.querySelector('#tasks').innerHTML += `
+                <div class="task">
+                    <span id="taskname">
+                        ${document.querySelector('#newtask input').value}
+                    </span>
+                    <button class="delete">
+                        <i class="far fa-trash-alt">Törlés</i>
+                    </button>
+                </div>
+            `;
+
+            var current_tasks = document.querySelectorAll(".delete");
+            for(var i=0; i<current_tasks.length; i++){
+                current_tasks[i].onclick = function(){
+                    this.parentNode.remove();
+                }
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>
